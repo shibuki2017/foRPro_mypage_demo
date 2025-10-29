@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ログアウト - foRPro マイページ</title>
+  <link rel="stylesheet" href="css/mypage-common.css">
+  <style>
+    /* リセット */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #fafafa;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <!-- マイページヘッダー -->
+  <div class="mypage-header">
+    <div class="mypage-header__container">
+      <a href="#" class="mypage-header__logo">
+        <img src="images/foRPro-logo.jpg" alt="foRPro">
+      </a>
+      <nav class="mypage-header__nav">
+        <ul class="mypage-header__nav-list">
+          <li class="mypage-header__nav-item">
+            <a href="#" class="mypage-header__nav-link">マイページトップ</a>
+          </li>
+          <li class="mypage-header__nav-item">
+            <a href="#" class="mypage-header__nav-link">プロフィール</a>
+          </li>
+          <li class="mypage-header__nav-item">
+            <a href="#" class="mypage-header__nav-link">案件を探す</a>
+          </li>
+          <li class="mypage-header__nav-item">
+            <a href="#" class="mypage-header__nav-link">応募済み案件</a>
+          </li>
+          <li class="mypage-header__nav-item">
+            <a href="#" class="mypage-header__nav-link">お気に入り</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="mypage-main">
+    <div class="mypage-container">
+
+      <!-- ログアウト完了画面 -->
+      <section class="mypage-section" style="max-width: 500px; margin: 0 auto; text-align: center;">
+        <div style="font-size: 60px; margin-bottom: 20px;">👋</div>
+        <h2 class="mypage-section__title" style="border-bottom: none;">ログアウトしました</h2>
+        <p style="color: #666; margin-bottom: 40px; font-size: 14px; line-height: 1.8;">
+          ログアウトが完了しました。<br>
+          またのご利用をお待ちしております。
+        </p>
+
+        <a href="login.html" class="mypage-btn" style="display: inline-block; margin-bottom: 20px;">再度ログイン</a>
+
+        <p style="margin-top: 30px;">
+          <a href="#" style="color: #8B7355; text-decoration: none; font-size: 14px;">← トップページに戻る</a>
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- 注意書き -->
+  <div style="position: fixed; bottom: 20px; right: 20px; background: #fff3cd; border: 1px solid #ffc107; padding: 15px; border-radius: 4px; max-width: 300px; font-size: 13px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <strong>⚠️ デザインプレビュー</strong><br>
+    これは静的HTMLプレビューです。実際のログアウト機能はHubSpot上で動作します。
+  </div>
+
+</body>
+</html>

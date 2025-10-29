@@ -1,0 +1,241 @@
+/* ========================================
+   マイページトップ画面専用スタイル - ミニマル
+   ======================================== */
+
+/* ウェルカムセクション */
+.mypage-welcome {
+  background: #f5f5f5;
+  color: #333333;
+  padding: 60px 40px;
+  border-radius: 0;
+  margin-bottom: 60px;
+  border: 1px solid #e8e8e8;
+}
+
+.mypage-welcome__title {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0 0 15px 0;
+  letter-spacing: 0.02em;
+  color: #333333;
+}
+
+.mypage-welcome__text {
+  margin: 0;
+  color: #666666;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/* お知らせ */
+.mypage-news {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mypage-news__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.mypage-news__item:hover {
+  padding-left: 10px;
+}
+
+.mypage-news__date {
+  color: #999999;
+  font-size: 13px;
+  white-space: nowrap;
+  min-width: 100px;
+  font-weight: 300;
+}
+
+.mypage-news__link {
+  color: #333333;
+  text-decoration: none;
+  font-weight: 400;
+  flex: 1;
+  font-size: 14px;
+}
+
+.mypage-news__link:hover {
+  color: #666666;
+}
+
+/* ToDoリスト */
+.mypage-todo {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mypage-todo__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 25px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.mypage-todo__item:last-child {
+  border-bottom: none;
+}
+
+.mypage-todo__icon {
+  font-size: 20px;
+  line-height: 1.4;
+  color: #999999;
+}
+
+.mypage-todo__content {
+  flex: 1;
+}
+
+.mypage-todo__text {
+  margin: 0 0 15px 0;
+  color: #333333;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.mypage-todo__action {
+  display: inline-block;
+  padding: 8px 20px;
+  background: transparent;
+  color: #333333;
+  text-decoration: none;
+  border: 1px solid #333333;
+  border-radius: 0;
+  font-size: 13px;
+  font-weight: 400;
+  transition: all 0.3s;
+}
+
+.mypage-todo__action:hover {
+  background: #333333;
+  color: #fff;
+}
+
+/* クイックリンク */
+.mypage-quicklinks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.mypage-quicklink-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 40px 30px;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 0;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.mypage-quicklink-card:hover {
+  border-color: #333333;
+  transform: none;
+  box-shadow: none;
+}
+
+.mypage-quicklink-card__icon {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+.mypage-quicklink-card__title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+  margin: 0 0 8px 0;
+  letter-spacing: 0.02em;
+}
+
+.mypage-quicklink-card__text {
+  font-size: 13px;
+  color: #999999;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* サポート情報 */
+.mypage-support {
+  text-align: center;
+  padding: 60px 40px;
+  background: #fafafa;
+  border-radius: 0;
+  border: 1px solid #e8e8e8;
+}
+
+.mypage-support__title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333333;
+  margin: 0 0 15px 0;
+  letter-spacing: 0.02em;
+}
+
+.mypage-support__text {
+  color: #666666;
+  margin: 0 0 30px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.mypage-support__button {
+  display: inline-block;
+  padding: 12px 30px;
+  background: transparent;
+  color: #333333;
+  text-decoration: none;
+  border: 1px solid #333333;
+  border-radius: 0;
+  font-weight: 400;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.mypage-support__button:hover {
+  background: #333333;
+  color: #fff;
+}
+
+/* ========================================
+   レスポンシブ
+   ======================================== */
+@media (max-width: 767px) {
+  .mypage-welcome {
+    padding: 25px;
+  }
+
+  .mypage-welcome__title {
+    font-size: 22px;
+  }
+
+  .mypage-news__item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .mypage-news__date {
+    min-width: auto;
+  }
+
+  .mypage-quicklinks {
+    grid-template-columns: 1fr;
+  }
+}

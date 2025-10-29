@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>案件詳細 - foRPro</title>
+  <link rel="stylesheet" href="css/mypage-common.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #fafafa; color: #333; }
+    .mypage-page-title { font-size: 28px; font-weight: 600; margin-bottom: 20px; color: #333; }
+    .project-detail-section { margin-bottom: 30px; }
+    .project-detail-section h3 { font-size: 18px; font-weight: 600; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #e8e8e8; }
+  </style>
+</head>
+<body>
+  <div class="mypage-header">
+    <div class="mypage-header__container">
+      <a href="mypage-top.html" class="mypage-header__logo">
+        <img src="images/foRPro-logo.jpg" alt="foRPro">
+      </a>
+      <nav class="mypage-header__nav">
+        <ul class="mypage-header__nav-list">
+          <li class="mypage-header__nav-item"><a href="mypage-top.html" class="mypage-header__nav-link">マイページトップ</a></li>
+          <li class="mypage-header__nav-item"><a href="profile.html" class="mypage-header__nav-link">プロフィール</a></li>
+          <li class="mypage-header__nav-item"><a href="projects-list.html" class="mypage-header__nav-link">案件を探す</a></li>
+          <li class="mypage-header__nav-item"><a href="#" class="mypage-header__nav-link">応募済み案件</a></li>
+          <li class="mypage-header__nav-item"><a href="favorites.html" class="mypage-header__nav-link">お気に入り</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <main class="mypage-main">
+    <div class="mypage-container">
+      <p style="margin-bottom: 20px;"><a href="projects-list.html" style="color: #8B7355; text-decoration: none;">← 案件一覧に戻る</a></p>
+
+      <section class="mypage-section">
+        <h1 class="mypage-page-title">大手金融機関の基幹システム刷新プロジェクト</h1>
+
+        <div style="display: flex; gap: 10px; margin-bottom: 30px;">
+          <span style="background: #f0f0f0; padding: 6px 16px; font-size: 13px; border-radius: 3px;">金融</span>
+          <span style="background: #f0f0f0; padding: 6px 16px; font-size: 13px; border-radius: 3px;">PM</span>
+        </div>
+
+        <div class="project-detail-section">
+          <h3>案件概要</h3>
+          <p style="line-height: 1.8; color: #666;">大手金融機関における基幹システムの全面刷新プロジェクトです。約3年間の大規模プロジェクトで、プロジェクトマネージャーとして全体統括を担当いただきます。</p>
+        </div>
+
+        <div class="project-detail-section">
+          <h3>募集要項</h3>
+          <table style="width: 100%; border-collapse: collapse;">
+            <tr style="border-bottom: 1px solid #f0f0f0;"><td style="padding: 12px 0; width: 150px; color: #666;">期間</td><td style="padding: 12px 0;">2025年1月〜（長期想定）</td></tr>
+            <tr style="border-bottom: 1px solid #f0f0f0;"><td style="padding: 12px 0; color: #666;">単価</td><td style="padding: 12px 0;">120万円/月</td></tr>
+            <tr style="border-bottom: 1px solid #f0f0f0;"><td style="padding: 12px 0; color: #666;">勤務地</td><td style="padding: 12px 0;">東京（一部リモート可）</td></tr>
+            <tr style="border-bottom: 1px solid #f0f0f0;"><td style="padding: 12px 0; color: #666;">稼働</td><td style="padding: 12px 0;">週5日</td></tr>
+          </table>
+        </div>
+
+        <div class="project-detail-section">
+          <h3>必須スキル</h3>
+          <ul style="padding-left: 20px; line-height: 2; color: #666;">
+            <li>大規模システム開発のPM経験 5年以上</li>
+            <li>金融業界での実務経験</li>
+            <li>ステークホルダーマネジメント経験</li>
+          </ul>
+        </div>
+
+        <div style="display: flex; gap: 15px; margin-top: 40px;">
+          <button class="mypage-btn" onclick="alert('これはデザインプレビューです')">この案件に応募する</button>
+          <button class="mypage-btn mypage-btn--secondary" onclick="alert('お気に入りに追加しました')">⭐ お気に入りに追加</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: #fff3cd; border: 1px solid #ffc107; padding: 15px; border-radius: 4px; max-width: 300px; font-size: 13px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <strong>⚠️ デザインプレビュー</strong><br>実際の応募機能はHubSpot上で動作します。
+  </div>
+</body>
+</html>

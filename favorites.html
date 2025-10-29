@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お気に入り - foRPro</title>
+  <link rel="stylesheet" href="css/mypage-common.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/favorites.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #fafafa; color: #333; }
+    .mypage-page-title { font-size: 24px; font-weight: 600; margin-bottom: 30px; color: #333; }
+    .favorites-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+    .favorites-count { font-weight: 600; color: #8B7355; }
+  </style>
+</head>
+<body>
+  <div class="mypage-header">
+    <div class="mypage-header__container">
+      <a href="mypage-top.html" class="mypage-header__logo">
+        <img src="images/foRPro-logo.jpg" alt="foRPro">
+      </a>
+      <nav class="mypage-header__nav">
+        <ul class="mypage-header__nav-list">
+          <li class="mypage-header__nav-item"><a href="mypage-top.html" class="mypage-header__nav-link">マイページトップ</a></li>
+          <li class="mypage-header__nav-item"><a href="profile.html" class="mypage-header__nav-link">プロフィール</a></li>
+          <li class="mypage-header__nav-item"><a href="projects-list.html" class="mypage-header__nav-link">案件を探す</a></li>
+          <li class="mypage-header__nav-item"><a href="#" class="mypage-header__nav-link">応募済み案件</a></li>
+          <li class="mypage-header__nav-item"><a href="favorites.html" class="mypage-header__nav-link">お気に入り</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <main class="mypage-main">
+    <div class="mypage-container">
+      <h2 class="mypage-page-title">お気に入り</h2>
+
+      <section class="mypage-section">
+        <div class="favorites-header">
+          <p style="color: #666; font-size: 14px;">お気に入りに追加した案件の一覧です。</p>
+          <span class="favorites-count">3件</span>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <!-- サンプル案件1 -->
+          <div style="border: 1px solid #e8e8e8; padding: 24px; background: #fff;">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px;">
+              <h3 style="font-size: 18px; font-weight: 600; color: #333;">大手金融機関の基幹システム刷新プロジェクト</h3>
+              <span style="color: #8B7355;">⭐</span>
+            </div>
+            <div style="display: flex; gap: 10px; margin-bottom: 12px;">
+              <span style="background: #f0f0f0; padding: 4px 12px; font-size: 12px; border-radius: 3px;">金融</span>
+              <span style="background: #f0f0f0; padding: 4px 12px; font-size: 12px; border-radius: 3px;">PM</span>
+            </div>
+            <p style="color: #666; font-size: 14px; margin-bottom: 16px;">期間: 2025年1月〜 | 単価: 120万円/月 | 場所: 東京</p>
+            <a href="project-detail.html" class="mypage-btn" style="display: inline-block;">詳細を見る</a>
+          </div>
+
+          <!-- サンプル案件2 -->
+          <div style="border: 1px solid #e8e8e8; padding: 24px; background: #fff;">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px;">
+              <h3 style="font-size: 18px; font-weight: 600; color: #333;">製造業のDX推進コンサルタント</h3>
+              <span style="color: #8B7355;">⭐</span>
+            </div>
+            <div style="display: flex; gap: 10px; margin-bottom: 12px;">
+              <span style="background: #f0f0f0; padding: 4px 12px; font-size: 12px; border-radius: 3px;">製造</span>
+              <span style="background: #f0f0f0; padding: 4px 12px; font-size: 12px; border-radius: 3px;">DX</span>
+            </div>
+            <p style="color: #666; font-size: 14px; margin-bottom: 16px;">期間: 2025年2月〜 | 単価: 100万円/月 | 場所: リモート可</p>
+            <a href="project-detail.html" class="mypage-btn" style="display: inline-block;">詳細を見る</a>
+          </div>
+
+          <!-- サンプル案件3 -->
+          <div style="border: 1px solid #e8e8e8; padding: 24px; background: #fff;">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px;">
+              <h3 style="font-size: 18px; font-weight: 600; color: #333;">ECサイトリニューアルPMO</h3>
+              <span style="color: #8B7355;">⭐</span>
+            </div>
+            <div style="display: flex; gap: 10px; margin-bottom: 12px;">
+              <span style="background: #f0f0f0; padding: 4px 12px; font-size: 12px; border-radius: 3px;">流通</span>
+              <span style="background: #f0f0f0; padding: 4px 12px; font-size: 12px; border-radius: 3px;">PMO</span>
+            </div>
+            <p style="color: #666; font-size: 14px; margin-bottom: 16px;">期間: 2025年3月〜 | 単価: 90万円/月 | 場所: 大阪</p>
+            <a href="project-detail.html" class="mypage-btn" style="display: inline-block;">詳細を見る</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: #fff3cd; border: 1px solid #ffc107; padding: 15px; border-radius: 4px; max-width: 300px; font-size: 13px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <strong>⚠️ デザインプレビュー</strong><br>実際のお気に入り機能はHubSpot上で動作します。
+  </div>
+</body>
+</html>

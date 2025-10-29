@@ -1,0 +1,377 @@
+/* ========================================
+   案件詳細ページ専用スタイル
+   ======================================== */
+
+/* パンくずリスト */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  font-size: 13px;
+}
+
+.breadcrumb__link {
+  color: #666666;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb__link:hover {
+  color: #333333;
+  text-decoration: none;
+}
+
+.breadcrumb__separator {
+  color: #cccccc;
+}
+
+.breadcrumb__current {
+  color: #999999;
+}
+
+/* 案件詳細 */
+.project-detail__header {
+  background: #fafafa;
+  color: #333333;
+  border: 1px solid #e8e8e8;
+}
+
+.project-detail__title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.project-detail__title {
+  flex: 1;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+  color: #333333;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+.project-detail__favorite {
+  background: transparent;
+  border: 1px solid #e8e8e8;
+  border-radius: 0;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  filter: grayscale(100%);
+  flex-shrink: 0;
+}
+
+.project-detail__favorite:hover,
+.project-detail__favorite.is-favorite {
+  background: #333333;
+  border-color: #333333;
+  filter: grayscale(0%);
+  transform: none;
+}
+
+.project-detail__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.project-detail__badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: #ffffff;
+  color: #666666;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 0;
+  border: 1px solid #e8e8e8;
+}
+
+.project-detail__badge--primary {
+  background: #333333;
+  color: #ffffff;
+  border-color: #333333;
+}
+
+.project-detail__date {
+  color: #999999;
+  font-size: 13px;
+  margin-left: auto;
+  font-weight: 300;
+}
+
+.project-detail__price-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 0;
+  border: 1px solid #e8e8e8;
+}
+
+.project-detail__price-label {
+  font-size: 13px;
+  color: #666666;
+  font-weight: 400;
+}
+
+.project-detail__price {
+  font-size: 28px;
+  font-weight: 500;
+  color: #333333;
+}
+
+/* セクションタイトル */
+.project-detail__section-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+  margin: 0 0 25px 0;
+  padding-left: 0;
+  border-left: none;
+  letter-spacing: 0.02em;
+}
+
+/* コンテンツ */
+.project-detail__content {
+  line-height: 1.8;
+  color: #666666;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.project-detail__content p {
+  margin: 0 0 15px 0;
+}
+
+/* スキルタグ */
+.project-detail__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.project-detail__skill-tag {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #fafafa;
+  color: #666666;
+  font-size: 13px;
+  font-weight: 400;
+  border-radius: 0;
+  border: 1px solid #e8e8e8;
+}
+
+.project-detail__empty {
+  color: #cccccc;
+  font-style: normal;
+  margin: 0;
+  font-weight: 300;
+}
+
+/* テーブル */
+.project-detail__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.project-detail__table th,
+.project-detail__table td {
+  padding: 18px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: left;
+}
+
+.project-detail__table th {
+  width: 180px;
+  background: #fafafa;
+  color: #666666;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.project-detail__table td {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.project-detail__table tr:last-child th,
+.project-detail__table tr:last-child td {
+  border-bottom: none;
+}
+
+/* 応募セクション */
+.project-detail__apply-section {
+  background: #fafafa;
+  border: 1px solid #e8e8e8;
+}
+
+.project-detail__apply-text {
+  color: #666666;
+  line-height: 1.8;
+  margin: 0 0 30px 0;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/* 応募フォーム */
+.project-apply-form__group {
+  margin-bottom: 30px;
+}
+
+.project-apply-form__label {
+  display: block;
+  font-weight: 400;
+  color: #333333;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.project-apply-form__textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #e8e8e8;
+  border-radius: 0;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+  transition: all 0.3s;
+  background: #ffffff;
+}
+
+.project-apply-form__textarea:focus {
+  outline: none;
+  border-color: #333333;
+  box-shadow: none;
+}
+
+.project-apply-form__actions {
+  display: flex;
+  gap: 15px;
+}
+
+.mypage-btn--large {
+  padding: 16px 40px;
+  font-size: 16px;
+}
+
+/* 案件が見つからない場合 */
+.project-detail__not-found {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.project-detail__not-found-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.project-detail__not-found-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 15px 0;
+}
+
+.project-detail__not-found-text {
+  font-size: 16px;
+  color: #7f8c8d;
+  margin: 0 0 30px 0;
+}
+
+/* ========================================
+   レスポンシブ
+   ======================================== */
+@media (max-width: 767px) {
+  .project-detail__title {
+    font-size: 22px;
+  }
+
+  .project-detail__title-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-detail__favorite {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .project-detail__price {
+    font-size: 26px;
+  }
+
+  .project-detail__table {
+    display: block;
+  }
+
+  .project-detail__table thead {
+    display: none;
+  }
+
+  .project-detail__table tr {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .project-detail__table th,
+  .project-detail__table td {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+  }
+
+  .project-detail__table th {
+    background: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .project-apply-form__actions {
+    flex-direction: column;
+  }
+
+  .project-apply-form__actions .mypage-btn {
+    width: 100%;
+  }
+}
+
+/* 応募処理中の状態 */
+.project-apply-form.is-applying {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.project-apply-form.is-applying::after {
+  content: '応募処理中...';
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px 40px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  z-index: 9999;
+}

@@ -1,0 +1,388 @@
+/* ========================================
+   案件ページ共通スタイル
+   ======================================== */
+
+/* 検索セクション */
+.projects-search {
+  background: #fff;
+}
+
+.projects-search__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 検索ボックス */
+.projects-search__box {
+  display: flex;
+  gap: 10px;
+}
+
+.projects-search__input {
+  flex: 1;
+  padding: 12px 20px;
+  border: 2px solid #cbd5e0;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+.projects-search__input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.projects-search__btn {
+  padding: 12px 30px;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.projects-search__btn:hover {
+  background: #2980b9;
+}
+
+/* フィルター */
+.projects-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: flex-end;
+}
+
+.projects-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 150px;
+}
+
+.projects-filter__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #5a6c7d;
+}
+
+.projects-filter__select {
+  padding: 10px 12px;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.projects-filter__select:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.projects-filters__clear {
+  padding: 10px 20px;
+  background: #fff;
+  color: #7f8c8d;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.projects-filters__clear:hover {
+  background: #f5f7fa;
+  border-color: #95a5a6;
+}
+
+/* ソート */
+.projects-sort {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.projects-sort__label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #5a6c7d;
+  white-space: nowrap;
+}
+
+.projects-sort__select {
+  padding: 10px 12px;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff;
+  cursor: pointer;
+  min-width: 150px;
+}
+
+/* 案件一覧ヘッダー */
+.projects-list__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.projects-list__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.projects-list__count {
+  color: #7f8c8d;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* 案件一覧 */
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+/* 案件カード */
+.project-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  border-color: #3498db;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.15);
+  transform: translateY(-2px);
+}
+
+.project-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.project-card__title {
+  flex: 1;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.project-card__title a {
+  color: #2c3e50;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.project-card__title a:hover {
+  color: #3498db;
+}
+
+.project-card__favorite {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+  line-height: 1;
+  transition: transform 0.2s;
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+
+.project-card__favorite:hover,
+.project-card__favorite.is-favorite {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.project-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.project-card__badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #f5f7fa;
+  color: #5a6c7d;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.project-card__badge--primary {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.project-card__price {
+  margin-left: auto;
+  font-size: 16px;
+  font-weight: 700;
+  color: #27ae60;
+}
+
+.project-card__description {
+  color: #5a6c7d;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 12px 0;
+  flex: 1;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.project-card__tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  color: #5a6c7d;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.project-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.project-card__date {
+  font-size: 13px;
+  color: #95a5a6;
+}
+
+.project-card__link {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.project-card__link:hover {
+  color: #2980b9;
+}
+
+/* 空の状態 */
+.projects-empty {
+  text-align: center;
+  padding: 60px 20px;
+  grid-column: 1 / -1;
+}
+
+.projects-empty__icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.projects-empty__text {
+  font-size: 18px;
+  color: #7f8c8d;
+  margin: 0;
+}
+
+/* ローディング */
+.projects-loading {
+  text-align: center;
+  padding: 40px;
+  color: #95a5a6;
+  grid-column: 1 / -1;
+}
+
+/* ========================================
+   レスポンシブ
+   ======================================== */
+@media (max-width: 767px) {
+  .projects-search__box {
+    flex-direction: column;
+  }
+
+  .projects-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .projects-filter {
+    min-width: 100%;
+  }
+
+  .projects-sort {
+    flex-direction: column;
+    align-items: stretch;
+    margin-left: 0;
+  }
+
+  .projects-sort__select {
+    width: 100%;
+  }
+
+  .projects-list {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card__meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-card__price {
+    margin-left: 0;
+  }
+}
+
+/* 閲覧済み案件 */
+.project-card.is-viewed {
+  opacity: 0.7;
+}
+
+.project-card.is-viewed .project-card__title::before {
+  content: '✓ ';
+  color: #95a5a6;
+}
+
+/* 応募済み案件 */
+.project-card.is-applied .project-card__title::before {
+  content: '✓ 応募済 ';
+  color: #27ae60;
+  font-size: 12px;
+  font-weight: 600;
+  background: #e8f5e9;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+}

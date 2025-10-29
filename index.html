@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>foRPro マイページ - デザインプレビュー</title>
+  <link rel="stylesheet" href="css/mypage-common.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #fafafa;
+      color: #333;
+    }
+
+    .page-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .page-card {
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      padding: 30px;
+      text-decoration: none;
+      color: #333;
+      transition: all 0.3s;
+    }
+
+    .page-card:hover {
+      border-color: #8B7355;
+      box-shadow: 0 4px 12px rgba(139, 115, 85, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .page-card__title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #8B7355;
+      margin-bottom: 12px;
+    }
+
+    .page-card__description {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .warning-box {
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 40px;
+    }
+
+    .warning-box h3 {
+      margin-bottom: 10px;
+      color: #856404;
+    }
+
+    .warning-box p {
+      color: #856404;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <!-- マイページヘッダー -->
+  <div class="mypage-header">
+    <div class="mypage-header__container">
+      <a href="index.html" class="mypage-header__logo">
+        <img src="images/foRPro-logo.jpg" alt="foRPro">
+      </a>
+      <nav class="mypage-header__nav">
+        <ul class="mypage-header__nav-list">
+          <li class="mypage-header__nav-item">
+            <a href="#" class="mypage-header__nav-link">マイページトップ</a>
+          </li>
+          <li class="mypage-header__nav-item">
+            <a href="#" class="mypage-header__nav-link">プロフィール</a>
+          </li>
+          <li class="mypage-header__nav-item">
+            <a href="#" class="mypage-header__nav-link">案件を探す</a>
+          </li>
+          <li class="mypage-header__nav-item">
+            <a href="#" class="mypage-header__nav-link">応募済み案件</a>
+          </li>
+          <li class="mypage-header__nav-item">
+            <a href="#" class="mypage-header__nav-link">お気に入り</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="mypage-main">
+    <div class="mypage-container">
+
+      <h1 style="font-size: 32px; font-weight: 600; margin-bottom: 20px; color: #333;">
+        foRPro マイページ - デザインプレビュー
+      </h1>
+
+      <!-- 警告ボックス -->
+      <div class="warning-box">
+        <h3>⚠️ これは静的HTMLプレビューです</h3>
+        <p>
+          このサイトはデザイン確認用のプレビューです。実際のログイン・登録機能は動作しません。<br>
+          実際の機能はHubSpot CMS上で実装されています。
+        </p>
+      </div>
+
+      <h2 style="font-size: 24px; font-weight: 600; margin-bottom: 20px; color: #333;">
+        マイページ一覧
+      </h2>
+
+      <!-- ページカードグリッド -->
+      <div class="page-grid">
+
+        <!-- マイページトップ -->
+        <a href="mypage-top.html" class="page-card">
+          <div class="page-card__title">🏠 マイページトップ</div>
+          <div class="page-card__description">
+            ログイン後に表示されるダッシュボード画面です。お知らせ、ToDoリスト、クイックリンクが表示されます。
+          </div>
+        </a>
+
+        <!-- ログインページ -->
+        <a href="login.html" class="page-card">
+          <div class="page-card__title">🔐 サインイン</div>
+          <div class="page-card__description">
+            ユーザーがマイページにアクセスする際の認証画面です。メールアドレスとパスワードでログインします。
+          </div>
+        </a>
+
+        <!-- 登録ページ -->
+        <a href="register.html" class="page-card">
+          <div class="page-card__title">✍️ アカウント登録</div>
+          <div class="page-card__description">
+            新規ユーザーがパスワードを設定してアカウント登録を完了する画面です。
+          </div>
+        </a>
+
+        <!-- パスワードリセット -->
+        <a href="reset-password.html" class="page-card">
+          <div class="page-card__title">🔄 パスワードリセット</div>
+          <div class="page-card__description">
+            パスワードを忘れたユーザーがリセット用のリンクを受け取るための画面です。
+          </div>
+        </a>
+
+        <!-- ログアウト -->
+        <a href="logout.html" class="page-card">
+          <div class="page-card__title">👋 ログアウト</div>
+          <div class="page-card__description">
+            ログアウト完了を通知する画面です。再ログインやトップページへのリンクがあります。
+          </div>
+        </a>
+
+        <!-- プロフィール -->
+        <a href="profile.html" class="page-card">
+          <div class="page-card__title">👤 プロフィール</div>
+          <div class="page-card__description">
+            ユーザーのプロフィール情報を表示・編集する画面です。基本情報、経験・スキル、職務経歴書のアップロードができます。
+          </div>
+        </a>
+
+        <!-- お気に入り -->
+        <a href="favorites.html" class="page-card">
+          <div class="page-card__title">⭐ お気に入り</div>
+          <div class="page-card__description">
+            お気に入りに追加した案件の一覧を表示します。気になる案件を保存して後から確認できます。
+          </div>
+        </a>
+
+        <!-- 案件一覧 -->
+        <a href="projects-list.html" class="page-card">
+          <div class="page-card__title">📋 案件を探す</div>
+          <div class="page-card__description">
+            案件の検索・フィルター機能を備えた一覧ページです。業種、職種、勤務地などで絞り込みができます。
+          </div>
+        </a>
+
+        <!-- 案件詳細 -->
+        <a href="project-detail.html" class="page-card">
+          <div class="page-card__title">📄 案件詳細</div>
+          <div class="page-card__description">
+            個別案件の詳細情報を表示します。募集要項、必須スキル、応募ボタンなどが配置されています。
+          </div>
+        </a>
+
+      </div>
+
+      <!-- デザインシステム情報 -->
+      <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #e8e8e8;">
+        <h2 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: #333;">
+          デザインシステム
+        </h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+
+          <!-- カラー -->
+          <div>
+            <h3 style="font-size: 14px; font-weight: 600; margin-bottom: 10px; color: #666;">カラー</h3>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <div style="width: 30px; height: 30px; background: #8B7355; border-radius: 4px;"></div>
+                <span style="font-size: 13px;">#8B7355</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <div style="width: 30px; height: 30px; background: #6D5A45; border-radius: 4px;"></div>
+                <span style="font-size: 13px;">#6D5A45</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <div style="width: 30px; height: 30px; background: #fafafa; border: 1px solid #e8e8e8; border-radius: 4px;"></div>
+                <span style="font-size: 13px;">#fafafa</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- タイポグラフィ -->
+          <div>
+            <h3 style="font-size: 14px; font-weight: 600; margin-bottom: 10px; color: #666;">タイポグラフィ</h3>
+            <div style="font-size: 13px; line-height: 1.8; color: #666;">
+              システムフォント<br>
+              基本: 14px<br>
+              見出し: 18px / 600
+            </div>
+          </div>
+
+          <!-- コンポーネント -->
+          <div>
+            <h3 style="font-size: 14px; font-weight: 600; margin-bottom: 10px; color: #666;">ボタン</h3>
+            <button class="mypage-btn" style="cursor: pointer;">プライマリボタン</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>

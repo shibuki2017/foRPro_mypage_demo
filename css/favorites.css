@@ -1,0 +1,174 @@
+/* ========================================
+   お気に入りページ専用スタイル
+   ======================================== */
+
+/* お気に入りヘッダー */
+.favorites-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 40px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.favorites-description {
+  flex: 1;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.favorites-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 30px;
+  background: #fafafa;
+  border-radius: 0;
+  border: 1px solid #e8e8e8;
+  color: #333333;
+  min-width: 100px;
+}
+
+.favorites-count {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.favorites-count::before {
+  content: '⭐ ';
+  font-size: 20px;
+}
+
+/* お気に入り空の状態 */
+.favorites-empty {
+  text-align: center;
+  padding: 100px 40px;
+}
+
+.favorites-empty__icon {
+  font-size: 64px;
+  margin-bottom: 30px;
+  opacity: 0.2;
+}
+
+.favorites-empty__title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333333;
+  margin: 0 0 15px 0;
+  letter-spacing: 0.02em;
+}
+
+.favorites-empty__text {
+  font-size: 14px;
+  color: #999999;
+  line-height: 1.8;
+  margin: 0 0 40px 0;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 300;
+}
+
+/* お気に入り削除ボタン */
+.project-card__remove-favorite {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  color: #999999;
+  border: 1px solid #e8e8e8;
+  border-radius: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.project-card:hover .project-card__remove-favorite {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.project-card__remove-favorite:hover {
+  background: #333333;
+  color: #fff;
+  border-color: #333333;
+}
+
+/* お気に入りカードのスタイル調整 */
+.favorites-page .project-card {
+  position: relative;
+}
+
+.favorites-page .project-card__favorite {
+  display: none; /* お気に入りページでは非表示 */
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* 削除中のアニメーション */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+.project-card.is-removing {
+  animation: fadeOut 0.3s ease-out forwards;
+}
+
+/* ========================================
+   レスポンシブ
+   ======================================== */
+@media (max-width: 767px) {
+  .favorites-header {
+    flex-direction: column;
+  }
+
+  .favorites-stats {
+    width: 100%;
+  }
+
+  .favorites-empty__icon {
+    font-size: 64px;
+  }
+
+  .favorites-empty__title {
+    font-size: 20px;
+  }
+
+  .favorites-empty__text {
+    font-size: 14px;
+  }
+}

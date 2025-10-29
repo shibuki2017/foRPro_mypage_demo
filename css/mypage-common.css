@@ -1,0 +1,198 @@
+/* ========================================
+   マイページ共通スタイル - ミニマルデザイン
+   ======================================== */
+
+/* コンテナ */
+.mypage-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ========================================
+   マイページヘッダー
+   ======================================== */
+.mypage-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.mypage-header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.mypage-header__logo {
+  flex-shrink: 0;
+  display: block;
+  line-height: 0;
+}
+
+.mypage-header__logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.mypage-header__nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.mypage-header__nav-list {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.mypage-header__nav-item {
+  margin: 0;
+}
+
+.mypage-header__nav-link {
+  color: #666666;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  transition: color 0.3s;
+  letter-spacing: 0.02em;
+}
+
+.mypage-header__nav-link:hover {
+  color: #333333;
+}
+
+/* ========================================
+   メインコンテンツ
+   ======================================== */
+.mypage-main {
+  padding: 60px 0;
+  background: #fafafa;
+  min-height: calc(100vh - 100px);
+}
+
+/* セクション */
+.mypage-section {
+  background: #fff;
+  border-radius: 0;
+  padding: 40px;
+  margin-bottom: 40px;
+  border: 1px solid #e8e8e8;
+}
+
+.mypage-section__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin: 0 0 30px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e8e8e8;
+  letter-spacing: 0.05em;
+}
+
+/* ========================================
+   レスポンシブ
+   ======================================== */
+@media (max-width: 767px) {
+  .mypage-header__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .mypage-nav__list {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .mypage-nav__link {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .mypage-header__user {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .mypage-section {
+    padding: 20px;
+  }
+}
+
+/* ========================================
+   ユーティリティ
+   ======================================== */
+.mypage-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #8B7355;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.mypage-btn:hover {
+  background: #6D5A45;
+  color: #fff;
+}
+
+.mypage-btn--secondary {
+  background: #A89784;
+}
+
+.mypage-btn--secondary:hover {
+  background: #8B7F6E;
+}
+
+.mypage-btn--danger {
+  background: #e74c3c;
+}
+
+.mypage-btn--danger:hover {
+  background: #c0392b;
+}
+
+/* ローディング */
+.mypage-loading {
+  text-align: center;
+  padding: 40px;
+  color: #95a5a6;
+}
+
+/* エラーメッセージ */
+.mypage-error {
+  background: #fee;
+  border: 1px solid #e74c3c;
+  color: #c0392b;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+/* 成功メッセージ */
+.mypage-success {
+  background: #efe;
+  border: 1px solid #27ae60;
+  color: #229954;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}

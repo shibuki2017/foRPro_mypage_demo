@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プロフィール - foRPro</title>
+  <link rel="stylesheet" href="css/mypage-common.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #fafafa;
+      color: #333;
+    }
+
+    .mypage-page-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 30px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <!-- マイページヘッダー -->
+  <div class="mypage-header">
+    <div class="mypage-header__container">
+      <a href="mypage-top.html" class="mypage-header__logo">
+        <img src="images/foRPro-logo.jpg" alt="foRPro">
+      </a>
+      <nav class="mypage-header__nav">
+        <ul class="mypage-header__nav-list">
+          <li class="mypage-header__nav-item">
+            <a href="mypage-top.html" class="mypage-header__nav-link">マイページトップ</a>
+          </li>
+          <li class="mypage-header__nav-item">
+            <a href="profile.html" class="mypage-header__nav-link">プロフィール</a>
+          </li>
+          <li class="mypage-header__nav-item">
+            <a href="projects-list.html" class="mypage-header__nav-link">案件を探す</a>
+          </li>
+          <li class="mypage-header__nav-item">
+            <a href="#" class="mypage-header__nav-link">応募済み案件</a>
+          </li>
+          <li class="mypage-header__nav-item">
+            <a href="favorites.html" class="mypage-header__nav-link">お気に入り</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="mypage-main">
+    <div class="mypage-container">
+
+      <h2 class="mypage-page-title">プロフィール</h2>
+
+      <!-- プロフィール表示・編集フォーム -->
+      <section class="mypage-section">
+        <form id="profileForm" class="profile-form" onsubmit="event.preventDefault(); alert('これはデザインプレビューです。実際の保存機能はHubSpot上で動作します。');">
+
+          <!-- 基本情報 -->
+          <div class="profile-section">
+            <h3 class="profile-section__title">基本情報</h3>
+
+            <div class="profile-form__row">
+              <div class="profile-form__group">
+                <label class="profile-form__label">姓 <span class="profile-form__required">必須</span></label>
+                <input type="text" name="lastname" class="profile-form__input" value="田中" required>
+              </div>
+              <div class="profile-form__group">
+                <label class="profile-form__label">名 <span class="profile-form__required">必須</span></label>
+                <input type="text" name="firstname" class="profile-form__input" value="太郎" required>
+              </div>
+            </div>
+
+            <div class="profile-form__group">
+              <label class="profile-form__label">メールアドレス <span class="profile-form__required">必須</span></label>
+              <input type="email" name="email" class="profile-form__input" value="tanaka.taro@example.com" required readonly>
+              <p class="profile-form__note">※メールアドレスは変更できません</p>
+            </div>
+
+            <div class="profile-form__group">
+              <label class="profile-form__label">電話番号</label>
+              <input type="tel" name="phone" class="profile-form__input" value="090-1234-5678">
+            </div>
+
+            <div class="profile-form__group">
+              <label class="profile-form__label">生年月日</label>
+              <input type="date" name="date_of_birth" class="profile-form__input" value="1985-04-15">
+            </div>
+
+            <div class="profile-form__group">
+              <label class="profile-form__label">現在の職種</label>
+              <input type="text" name="jobtitle" class="profile-form__input" value="ITコンサルタント">
+            </div>
+          </div>
+
+          <!-- 経験・スキル -->
+          <div class="profile-section">
+            <h3 class="profile-section__title">経験・スキル</h3>
+
+            <div class="profile-form__group">
+              <label class="profile-form__label">出身企業</label>
+              <input type="text" name="company" class="profile-form__input" value="ABC株式会社">
+              <p class="profile-form__note">過去に在籍していた主な企業名を入力してください</p>
+            </div>
+
+            <div class="profile-form__group">
+              <label class="profile-form__label">経験職種</label>
+              <textarea name="work_experience" class="profile-form__textarea" rows="3">ITコンサルタント、プロジェクトマネージャー、システムエンジニア</textarea>
+              <p class="profile-form__note">例: ITコンサルタント、プロジェクトマネージャー、システムエンジニアなど</p>
+            </div>
+
+            <div class="profile-form__group">
+              <label class="profile-form__label">経験業種</label>
+              <textarea name="industry_experience" class="profile-form__textarea" rows="3">金融、製造、流通</textarea>
+              <p class="profile-form__note">例: 金融、製造、流通、通信など</p>
+            </div>
+
+            <div class="profile-form__group">
+              <label class="profile-form__label">保有資格</label>
+              <textarea name="certifications" class="profile-form__textarea" rows="3">PMP、情報処理技術者（応用情報）</textarea>
+              <p class="profile-form__note">例: PMP、情報処理技術者、MBA、公認会計士など</p>
+            </div>
+
+            <div class="profile-form__group">
+              <label class="profile-form__label">英語力</label>
+              <select name="english_level" class="profile-form__select">
+                <option value="">選択してください</option>
+                <option value="native">ネイティブレベル</option>
+                <option value="business" selected>ビジネスレベル</option>
+                <option value="daily">日常会話レベル</option>
+                <option value="basic">基礎レベル</option>
+                <option value="none">不可</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- 経験PR -->
+          <div class="profile-section">
+            <h3 class="profile-section__title">経験PR</h3>
+
+            <div class="profile-form__group">
+              <label class="profile-form__label">自己PR・アピールポイント</label>
+              <textarea name="about_me" class="profile-form__textarea" rows="6">金融業界で10年以上のIT経験があります。大規模システムのプロジェクトマネジメントを得意としており、予算管理やステークホルダーマネジメントにも精通しています。</textarea>
+              <p class="profile-form__note">ご自身の強みや経験、アピールしたいスキルなどを記載してください</p>
+            </div>
+          </div>
+
+          <!-- 職務経歴書 -->
+          <div class="profile-section">
+            <h3 class="profile-section__title">職務経歴書</h3>
+
+            <div class="profile-form__group">
+              <label class="profile-form__label">職務経歴書（PDF）</label>
+              <div class="profile-file-upload">
+                <input type="file" id="resumeFile" name="resume" accept=".pdf" class="profile-file-upload__input">
+                <label for="resumeFile" class="profile-file-upload__label">
+                  <span class="profile-file-upload__icon">📄</span>
+                  <span class="profile-file-upload__text">ファイルを選択</span>
+                </label>
+                <div id="resumeFileName" class="profile-file-upload__filename"></div>
+              </div>
+              <p class="profile-form__note">※PDF形式のみアップロード可能です（最大10MB）</p>
+            </div>
+          </div>
+
+          <!-- 保存ボタン -->
+          <div class="profile-form__actions">
+            <button type="submit" class="mypage-btn">保存する</button>
+            <button type="button" class="mypage-btn mypage-btn--secondary" onclick="window.location.href='mypage-top.html'">キャンセル</button>
+          </div>
+
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- 注意書き -->
+  <div style="position: fixed; bottom: 20px; right: 20px; background: #fff3cd; border: 1px solid #ffc107; padding: 15px; border-radius: 4px; max-width: 300px; font-size: 13px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <strong>⚠️ デザインプレビュー</strong><br>
+    これは静的HTMLプレビューです。実際の保存機能はHubSpot上で動作します。
+  </div>
+
+</body>
+</html>

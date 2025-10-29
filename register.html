@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アカウント登録 - foRPro マイページ</title>
+  <link rel="stylesheet" href="css/mypage-common.css">
+  <style>
+    /* リセット */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #fafafa;
+      color: #333;
+    }
+
+    /* 登録フォームのカスタムスタイル */
+    .mypage-register-form {
+      margin: 0;
+    }
+
+    .mypage-register-form input[type="email"],
+    .mypage-register-form input[type="password"],
+    .mypage-register-form input[type="text"] {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #e8e8e8;
+      border-radius: 4px;
+      font-size: 14px;
+      margin-top: 8px;
+      transition: border-color 0.3s;
+    }
+
+    .mypage-register-form input:focus {
+      outline: none;
+      border-color: #8B7355;
+    }
+
+    .mypage-register-form label {
+      display: block;
+      color: #333;
+      font-weight: 500;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .mypage-register-form button[type="submit"] {
+      width: 100%;
+      padding: 14px 24px;
+      background: #8B7355;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-weight: 500;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 30px;
+    }
+
+    .mypage-register-form button[type="submit"]:hover {
+      background: #6D5A45;
+    }
+
+    .mypage-register-form .form-field {
+      margin-bottom: 0;
+    }
+
+    .mypage-register-form .password-requirements {
+      font-size: 12px;
+      color: #999;
+      margin-top: 6px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <!-- マイページヘッダー -->
+  <div class="mypage-header">
+    <div class="mypage-header__container">
+      <a href="#" class="mypage-header__logo">
+        <img src="images/foRPro-logo.jpg" alt="foRPro">
+      </a>
+      <nav class="mypage-header__nav">
+        <ul class="mypage-header__nav-list">
+          <li class="mypage-header__nav-item">
+            <a href="#" class="mypage-header__nav-link">マイページトップ</a>
+          </li>
+          <li class="mypage-header__nav-item">
+            <a href="#" class="mypage-header__nav-link">プロフィール</a>
+          </li>
+          <li class="mypage-header__nav-item">
+            <a href="#" class="mypage-header__nav-link">案件を探す</a>
+          </li>
+          <li class="mypage-header__nav-item">
+            <a href="#" class="mypage-header__nav-link">応募済み案件</a>
+          </li>
+          <li class="mypage-header__nav-item">
+            <a href="#" class="mypage-header__nav-link">お気に入り</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="mypage-main">
+    <div class="mypage-container">
+
+      <!-- 登録セクション -->
+      <section class="mypage-section" style="max-width: 500px; margin: 0 auto;">
+        <h2 class="mypage-section__title" style="text-align: center; border-bottom: none; padding-bottom: 0;">アカウント登録</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 40px; font-size: 14px;">
+          パスワードを設定して、登録を完了してください。
+        </p>
+
+        <!-- 登録フォーム -->
+        <form class="mypage-register-form" onsubmit="event.preventDefault(); alert('これはデザインプレビューです。実際の登録機能はHubSpot上で動作します。');">
+
+          <div class="form-field">
+            <label for="email">
+              メールアドレス<span style="color: #e74c3c;">*</span>
+            </label>
+            <input type="email" id="email" name="email" placeholder="メールアドレス" required>
+          </div>
+
+          <div class="form-field" style="margin-top: 20px;">
+            <label for="password">
+              パスワード<span style="color: #e74c3c;">*</span>
+            </label>
+            <input type="password" id="password" name="password" placeholder="パスワード" required>
+            <div class="password-requirements">
+              パスワードは8文字以上で、大文字・小文字・数字・記号を含む必要があります。
+            </div>
+          </div>
+
+          <div class="form-field" style="margin-top: 20px;">
+            <label for="password-confirm">
+              パスワード（確認）<span style="color: #e74c3c;">*</span>
+            </label>
+            <input type="password" id="password-confirm" name="password-confirm" placeholder="パスワード（確認）" required>
+          </div>
+
+          <button type="submit">登録する</button>
+
+        </form>
+
+        <p style="text-align: center; color: #999; margin-top: 30px; font-size: 13px;">
+          お困りの場合は、<a href="#" style="color: #8B7355; text-decoration: underline;">サポートまでお問い合わせください</a>
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- 注意書き -->
+  <div style="position: fixed; bottom: 20px; right: 20px; background: #fff3cd; border: 1px solid #ffc107; padding: 15px; border-radius: 4px; max-width: 300px; font-size: 13px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <strong>⚠️ デザインプレビュー</strong><br>
+    これは静的HTMLプレビューです。実際の登録機能はHubSpot上で動作します。
+  </div>
+
+</body>
+</html>
